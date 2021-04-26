@@ -9,6 +9,12 @@ parser.add_argument('--manual', '-m',
                     metavar = 'Choose manual mode of operation'
                     )
 
+parser.add_argument('--filename', '-f',
+                    metavar = 'Name of the meal file'
+                    )
+
+args = parser.parse_args()
+
 # Define classes
 
 class mealFile:
@@ -54,4 +60,29 @@ def CreateMeal(meal_type: str, ingredients: dict,
     meal['meal_variant'] = meal_variant
 
     return meal
+
+
+if __name__ == "__main__":
+    done = False
+    meal_1 = mealFile(args.filename)
+
+    if args.m == 'm':
+        while not done:
+            m_type = input('Please enter the meal type: ')
+            ingredients = input('Please add ingredients. I.e. food:qty: ')
+            n_day = int(input('Please add to '))
+            m_variant = int(input('Please add meal variant number: '))
+            meal = CreateMeal(m_type, ingredients, n_day, m_variant)
+            meal_1.addMeal(meal)
+            end = input('Do you want to continue (Y\N): ')
+            if end == 'N':
+                print('Finished adding meals.')
+                done = True
+
+        print('Writing {0}'.format(meal_1.file_name))
+        meal_1.writeFile()
+
+
+
+
 
