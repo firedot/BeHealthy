@@ -1,7 +1,7 @@
 import json
 import os
 import argparse
-
+from random import randint
 
 parser = argparse.ArgumentParser()
 
@@ -35,7 +35,7 @@ class mealFile:
              meal_variant: 1-10
              }
         """
-        pass
+       self.body['day_meals'].append(meal)
 
     def writeFile():
         with open(self.name, 'w') as output_file:
