@@ -8,7 +8,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--manual', '-m',
                     metavar = 'Choose manual mode of operation'
                     )
-mealfiles = ['breakfast.json', 'lunch.json', 'dinner.json', 'snack.json']
 
 # Define classes
 
@@ -56,9 +55,3 @@ def CreateMeal(meal_type: str, ingredients: dict,
 
     return meal
 
-# Check if meal files exist
-
-for file in mealfiles:
-    if not os.path.exists(file):
-        print(f'Creating file {file}')
-        file_struct = {[{'id': null, ''}]
