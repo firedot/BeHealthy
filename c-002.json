@@ -1,0 +1,1 @@
+{"client_info": [{"name": "John Smith", "country": "Budundi", "city": "Zatsa", "time_zone": "GMT+3", "phone": "000-111-222-333", "email": "who@are.you"}], "plant_info": [{"plant_id": "c-001-p1", "geo_data": [{"lat": 43.021, "lon": 25.894}]}, {"capacity": 21000, "system_loss": 0.1, "tilt": 30, "tracking": 0, "azim": 180}]}
