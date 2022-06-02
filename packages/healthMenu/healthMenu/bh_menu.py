@@ -1,6 +1,6 @@
 from meal import Meal
 
-class Menu:
+class BhMenu:
    '''
    A class fore representation of a daily menu
 
