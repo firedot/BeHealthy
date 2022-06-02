@@ -28,7 +28,7 @@ class Menu:
    def addMeal(self, m: Meal):
       self.meals.append(m)
 
-   listMenu(self):
+   def listMenu(self):
       return self.meals
 
 
