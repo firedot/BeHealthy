@@ -1,5 +1,3 @@
-from meal import Meal
-
 class BhMenu:
    '''
    A class fore representation of a daily menu
@@ -25,7 +23,11 @@ class BhMenu:
       self.dop = dop
       self.meals = []
 
-   def addMeal(self, m: Meal):
+   def addMeal(self, m):
+      '''
+      m should be an object
+      of class Meal
+      '''
       self.meals.append(m)
 
    def listMenu(self):
